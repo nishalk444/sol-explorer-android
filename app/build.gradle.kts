@@ -2,6 +2,16 @@ plugins { id("com.android.application"); id("org.jetbrains.kotlin.android"); id(
 
 android { namespace = "com.nisha.solexplorer"; compileSdk = 35
     defaultConfig { applicationId = "com.nisha.solexplorer"; minSdk = 26; targetSdk = 35; versionCode = 1; versionName = "1.0" }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11)
+    }
 }
 
 dependencies {
